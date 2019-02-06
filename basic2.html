@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Basic 2</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<input id="input" type="text" placeholder="Your tasks here..." value="">
+	<button id="btn">Add task</button>
+	<ul id="list">
+	</ul>
+
+	<script>
+		$("#btn").on("click", function(){
+			var task = $("#input").val();
+			$("#list").append("<li>" + task + "</li>");
+		});
+
+		$("#list").on("click", "li", function(){
+			$(this).animate({
+				opacity: 0.0,
+				paddingLeft: '+=80px'
+			}, 500, function(){
+				$(this).slideUp("normal", function(){
+					$(this).remove();
+				});
+			});
+		});
+	</script>
+</body>
+</html>
