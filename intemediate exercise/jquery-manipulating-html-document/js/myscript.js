@@ -1,6 +1,6 @@
 $(document).ready(function(){
 /*var computer = [];*/
-	for (i=0; i<6; i++){
+	for (i=0; i<8; i++){
 		img = $(".product-image img:eq("+i+")").attr("src");
 		notebook = img.substring(4,12);
 		phone = img.substring(4, 9);
