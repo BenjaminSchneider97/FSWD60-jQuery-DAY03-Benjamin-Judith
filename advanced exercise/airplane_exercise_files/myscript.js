@@ -5,7 +5,10 @@ $(document).ready(function(){
 		var top = e.pageY -115;
 		$('#moveme').css({'left': left, "top": top});
 		});
-	$(document).on("click", function(ev){
-		$("#moveme").fadeOut(500).fadeIn(500).removeAttr("id");
+	$(document).on("click", function(){
+		$("#moveme").removeAttr("id").animate({
+			top: 1000
+		});
+		/*$("#moveme").fadeOut(500).fadeIn(500).removeAttr("id")*/;
 		});
 });
